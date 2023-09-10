@@ -1,0 +1,70 @@
+
+public class nigga {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+
+	public static int ex1(int n) {
+		if (n>1)
+			return n+ex1(n-1);
+		else
+			return 1;
+	}
+	
+	public static int ex2(int n) {
+		if (n>1)
+			return n*ex2(n-1);
+		else
+			return 1;
+	}
+	
+	public static int ex3(int n) {
+		if (n%2==1)
+			n-=1;
+		
+		if (n>1)
+			return n*ex3(n-2);
+		else
+			return 1;
+	}
+	
+	public static int ex4(int n) {
+		
+		if (n>9) 
+			return 1+ex4(n/10);
+		
+		else
+			return 1;
+	}
+	
+	public static int ex5(int n, int m) {
+	
+		if (n-m>0)
+			return 1+ex5((n-m), m);
+		else
+			return 1;
+	}
+	
+	public static int ex9_help(int n) {
+	
+		
+		if (n>0) 
+			return (n%2) + ex9_help(n/10);
+			
+			else
+				return 0;
+	}
+	
+	public static boolean ex9(int n) {
+		
+		if (ex9_help(n)==ex4(n) || ex9_help(n)==0)
+			return true;
+
+		else
+			return false;
+	}
+	
+}
